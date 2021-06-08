@@ -1,6 +1,5 @@
 from sqlalchemy import *
-from sqlalchemy.orm import (scoped_session, sessionmaker, relationship,
-                            backref)
+from sqlalchemy.orm import (scoped_session, sessionmaker)
 from sqlalchemy.ext.declarative import declarative_base
 
 import os
@@ -79,9 +78,3 @@ class BankBranches(Base):
 
     def __repr__(self):
         return self.ifsc
-
-
-with engine.connect() as connection:
-    result = connection.execute("select * from banks")
-    for row in result:
-        print("Name: ", row['name'])
