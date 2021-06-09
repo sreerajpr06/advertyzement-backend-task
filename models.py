@@ -6,8 +6,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-database_uri = os.environ.get('DATABASE_URL')
-database_uri.replace("postgres", "postgresql")
+database_uri = os.environ.get('DATABASE_URL').replace("postgres", "postgresql")
 engine = create_engine(database_uri)
 db_session = scoped_session(sessionmaker(autocommit=False,
                                          autoflush=False,
