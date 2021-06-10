@@ -39,3 +39,19 @@ The database url would be of the format \
 * To run, in the terminal, run \
 `python app.py`
 
+## Program Structure
+
+There are 3 files for the program: 
+* models.py: It consists of the models used.
+* schema.py: Contains the types and relationships between fields.
+* app.py: The entry point.
+
+## Approach to Solve
+
+For solving, first step was to study how the data was stored. Looking at the problem and the data, it reached to the conclusion that the required data is stored in the view created, called "bank_branches".
+
+The next step was to create the model.py file, where the models used are stored. Fairly straightforward process, connecting to the database, etc.
+
+Next step was creating the schema.py file. In here, the schema was defined.
+
+And then, the app.py file was created, and the necessary routes were added.
