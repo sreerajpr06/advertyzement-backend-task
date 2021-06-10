@@ -12,7 +12,7 @@ class BankBranches(SQLAlchemyObjectType):
 
 class Query(graphene.ObjectType):
     node = relay.Node.Field()
-    all_branches = SQLAlchemyConnectionField(BankBranches.connection)
+    branches = SQLAlchemyConnectionField(BankBranches.connection)
 
 
 schema = graphene.Schema(query=Query)
